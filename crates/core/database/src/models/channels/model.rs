@@ -400,6 +400,22 @@ impl Channel {
         matches!(self, Channel::DirectMessage { .. })
     }
 
+    /// Map out whether it is a TextChannel
+    pub fn is_text_channel(&self) -> bool {
+        matches!(self, Channel::TextChannel { .. })
+    }
+
+    /// Clone this channel's id
+    pub fn server(&self) -> &str {
+        match self {
+            Channel::DirectMessage { .. }
+            | Channel::Group { .. }
+            | Channel::SavedMessages { .. }
+            | Channel::TextChannel { server, .. }
+            | Channel::VoiceChannel { server, .. } => server,
+        }
+    }
+
     /// Check whether has a user as a recipient
     pub fn contains_user(&self, user_id: &str) -> bool {
         match self {

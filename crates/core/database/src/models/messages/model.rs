@@ -309,6 +309,11 @@ impl Message {
         let mut mentions = HashSet::new();
         if allow_mentions {
             if let Some(content) = &data.content {
+                if (content.contains("@everyone") && channel.is_text_channel()) {
+                    for capture in db.fetch_all_members(channel.server()).await? {
+                        mentions.insert(capture.id.user.as_str().to_string());
+                    }
+                }
                 for capture in RE_MENTION.captures_iter(content) {
                     if let Some(mention) = capture.get(1) {
                         mentions.insert(mention.as_str().to_string());
