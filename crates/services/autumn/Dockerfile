@@ -7,6 +7,10 @@ COPY --from=builder /home/rust/src/target/release/revolt-autumn ./
 COPY --from=mwader/static-ffmpeg:7.0.2 /ffmpeg /usr/local/bin/
 COPY --from=mwader/static-ffmpeg:7.0.2 /ffprobe /usr/local/bin/
 
+RUN apt-get update && \
+    apt-get install -y \
+    coreutils
+
 EXPOSE 14704
 USER nonroot
 CMD ["./revolt-autumn"]
