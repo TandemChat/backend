@@ -1,7 +1,6 @@
-You requested a password reset, if you did not perform this action you can safely ignore this email.
+Вы запросили сброс пароля, если вы не выполнили это действие, вы можете безопасно игнорировать это письмо.
 
-Please navigate to: {{url}}
+Сброс пароля: {{url}}
 
-This email is intended for {{email}}
-Sent by Revolt
-Made in Europe
+Сообщение для {{email}}
+Отправлено Tandem

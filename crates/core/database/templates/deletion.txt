@@ -1,7 +1,6 @@
-You requested to have your account deleted, if you did not perform this action please take measures to secure your account immediately.
+Вы попросили удалить свою учетную запись, если вы не выполнили это действие, пожалуйста, примите меры для безопасности своей учетной записи.
 
-Please navigate to: {{url}}
+Удаление: {{url}}
 
-This email is intended for {{email}}
-Sent by Revolt
-Made in Europe
+Сообщение для {{email}}
+Отправлено Tandem
