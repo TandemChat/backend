@@ -20,17 +20,17 @@ fi
 
 TAG=$1-debug
 echo "Building images, will tag for ghcr.io with $TAG!"
-docker build -t ghcr.io/revoltchat/base:latest -f Dockerfile.useCurrentArch .
-docker build -t ghcr.io/revoltchat/server:$TAG - < crates/delta/Dockerfile
-docker build -t ghcr.io/revoltchat/bonfire:$TAG - < crates/bonfire/Dockerfile
-docker build -t ghcr.io/revoltchat/autumn:$TAG - < crates/services/autumn/Dockerfile
-docker build -t ghcr.io/revoltchat/january:$TAG - < crates/services/january/Dockerfile
+docker build -t ghcr.io/tandemchat/base:latest -f Dockerfile.useCurrentArch .
+docker build -t ghcr.io/tandemchat/server:$TAG - < crates/delta/Dockerfile
+docker build -t ghcr.io/tandemchat/bonfire:$TAG - < crates/bonfire/Dockerfile
+docker build -t ghcr.io/tandemchat/autumn:$TAG - < crates/services/autumn/Dockerfile
+docker build -t ghcr.io/tandemchat/january:$TAG - < crates/services/january/Dockerfile
 
 if [ "$DEBUG" = "true" ]; then
   git restore Cargo.toml
 fi
 
-docker push ghcr.io/revoltchat/server:$TAG
-docker push ghcr.io/revoltchat/bonfire:$TAG
-docker push ghcr.io/revoltchat/autumn:$TAG
-docker push ghcr.io/revoltchat/january:$TAG
+docker push ghcr.io/tandemchat/server:$TAG
+docker push ghcr.io/tandemchat/bonfire:$TAG
+docker push ghcr.io/tandemchat/autumn:$TAG
+docker push ghcr.io/tandemchat/january:$TAG
