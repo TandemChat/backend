@@ -10,6 +10,7 @@ RUN dpkg --add-architecture "${TARGETARCH}"
 RUN apt-get update && \
     apt-get install -y \
     make \
+    coreutils \
     pkg-config \
     libssl-dev:"${TARGETARCH}"
 COPY scripts/build-image-layer.sh /tmp/
