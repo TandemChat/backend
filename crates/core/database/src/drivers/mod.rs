@@ -122,19 +122,19 @@ impl Database {
                     expiry: Default::default(),
                     templates: Templates {
                         verify: Template {
-                            title: "Verify your Revolt account.".into(),
+                            title: "Подтверждение аккаунта Tandem.".into(),
                             text: include_str!("../../templates/verify.txt").into(),
                             url: format!("{}/login/verify/", config.hosts.app),
                             html: Some(include_str!("../../templates/verify.html").into()),
                         },
                         reset: Template {
-                            title: "Reset your Revolt password.".into(),
+                            title: "Сброс пароля Tandem.".into(),
                             text: include_str!("../../templates/reset.txt").into(),
                             url: format!("{}/login/reset/", config.hosts.app),
                             html: Some(include_str!("../../templates/reset.html").into()),
                         },
                         deletion: Template {
-                            title: "Confirm account deletion.".into(),
+                            title: "Подверждение удаления аккаунта.".into(),
                             text: include_str!("../../templates/deletion.txt").into(),
                             url: format!("{}/delete/", config.hosts.app),
                             html: Some(include_str!("../../templates/deletion.html").into()),

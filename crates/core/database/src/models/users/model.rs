@@ -724,7 +724,7 @@ impl User {
                     account.email.clone(),
                     // maybe move this to common area?
                     &Template {
-                        title: "Account Suspension".to_string(),
+                        title: "Аккаунт Tandem заморожен".to_string(),
                         html: Some(include_str!("../../../templates/suspension.html").to_owned()),
                         text: include_str!("../../../templates/suspension.txt").to_owned(),
                         url: Default::default(),

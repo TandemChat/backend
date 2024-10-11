@@ -1,12 +1,11 @@
-Your account has been suspended, for one or more reasons:
+Ваш аккаунт был заморожен по следующим причинам:
 {{list}}
 
-You will be able to use your account again in {{duration}} days.
+Вы сможете снова использовать свою учетную запись через {{duration}} дней.
 
-Further violations may result in a permanent ban depending on severity, please abide by the Acceptable Usage Policy (https://revolt.chat/aup).
+Дальнейшие нарушения могут привести к перманентному бану в зависимости от тяжести, пожалуйста, соблюдайте Acceptable Usage Policy (https://revolt.chat/aup).
 
-Ban evasion is prohibited and will be dealt with accordingly.
+Обход блокировки запрещен и будет рассматривать как нарушение.
 
-This email is intended for {{email}}
-Sent by Revolt
-Made in Europe
+Сообщение для {{email}}
+Отправлено Tandem
