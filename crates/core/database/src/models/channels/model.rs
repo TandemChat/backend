@@ -408,11 +408,8 @@ impl Channel {
     /// Clone this channel's id
     pub fn server(&self) -> &str {
         match self {
-            Channel::DirectMessage { .. }
-            | Channel::Group { .. }
-            | Channel::SavedMessages { .. }
-            | Channel::TextChannel { server, .. }
-            | Channel::VoiceChannel { server, .. } => server,
+            Channel::TextChannel { server, .. } => server,
+            _ => "0",
         }
     }
 
